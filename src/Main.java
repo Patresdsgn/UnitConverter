@@ -11,13 +11,31 @@ public class Main {
             System.out.println("1. Length");
             System.out.println("2. Weight");
             System.out.println("3. Temperature");
-            System.out.println("4. Speed");
-            System.out.println("5. Exit");
+            System.out.println("4. Exit");
+            System.out.println("Enter your choice: ");
 
-            int choice = integerInput(scanner, "Enter your choice: ");
+            int choice = scanner.nextInt();
 
-            
-
+            switch (choice) {
+                case 1:
+                    System.out.println("You selected length conversion");
+                    break;
+                case 2:
+                    System.out.println("You selected weight conversion.");
+                    break;
+                case 3: 
+                    System.out.println("You selected temperature conversion.");
+                    break;
+                case 4:
+                    System.out.println("Exiting program...");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid option, try again.");
+                    break;
+                }
+            System.out.println();
         }
+        scanner.close();
     }
 }
